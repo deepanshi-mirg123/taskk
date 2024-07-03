@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <span class="heading">EMS</span>
+    <span class="example-spacer"></span>
+    <div *ngIf="menuType" [ngSwitch]="menuType" class="header-section">
+        <ul *ngSwitchCase="'employee'" class="nav-list">
+            <li><a routerLink="employee-home" routerLinkActive="selected" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+            <li><a (click)="userLogout()">Logout</a></li>
+        </ul>
+        <ul *ngSwitchCase="'admin'" class="nav-list">
+            <li><a routerLink="admin-add-employee" routerLinkActive="selected" [routerLinkActiveOptions]="{ exact: true }">Add Employee</a></li>
+            <li><a routerLink="admin-home" routerLinkActive="selected" [routerLinkActiveOptions]="{ exact: true }">List</a></li>
+            <li><a (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+</mat-toolbar>

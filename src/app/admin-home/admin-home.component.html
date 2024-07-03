@@ -1,0 +1,27 @@
+<div class="main-header" style="margin-left:5rem;">
+    <div class=" mb-3  align-items-center ">
+        <div class="col d-flex justify-content-between">
+            <h3 class="fw-bold title" style="display: inline-block;color: blue;font-weight: bold; font-size: 3rem;">
+                Employee List</h3>
+        </div>
+    </div>
+</div>
+<div class="product-list"
+    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin: 5rem;">
+    <mat-card class="example-card" appearance="outlined" *ngFor="let item of productList"
+        style="padding: 2rem; background-color: rgb(234 232 232 / 47%);border-radius: 5px; height: 150% !important;">
+        <mat-card-header style="font-size: 5rem !important;">
+            <mat-card-title style="font-size: xx-large;">{{ item.name }}</mat-card-title>
+            <mat-card-title style="font-size: x-large;">{{ item.designation }}</mat-card-title>
+            <mat-card-subtitle>{{ item.email }}</mat-card-subtitle>
+            <mat-card-subtitle>{{ item.gender }}</mat-card-subtitle>
+            <mat-card-subtitle>{{ item.city }}</mat-card-subtitle>
+            <mat-card-subtitle>{{ item.number }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions style="bottom: 10px; position: absolute;margin-left: 10rem;">
+           
+               <button  mat-raised-button  style="margin-right: 1rem;"> <a  class="adjust-update-link" routerLink="/admin-update-employee/{{item.id}}">Update</a></button>
+            <button  mat-raised-button (click)="deleteEmployee(item.id)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

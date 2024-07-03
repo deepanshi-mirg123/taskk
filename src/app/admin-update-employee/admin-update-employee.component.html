@@ -1,0 +1,50 @@
+<div class="update-product" style=" flex-direction: column;display: flex;margin-left: 60rem;">
+    <p class="message-p">{{Message}}</p>
+    <h1 class="update">Update Product</h1>
+    <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form"
+        style="display: flex; margin-left: 5rem;margin-top: 2rem;">
+        <div class="w-100 d-flex" style="display:flex; flex-direction: column; width: 40%;">
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Enter Name</mat-label>
+                <input matInput type="text" class="form-input" name="name" placeholder="Enter Product Name"
+                    ngModel="{{employeeData?.name}}">
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Enter Email</mat-label>
+                <input matInput type="text" class="form-input" name="email" placeholder="Enter email"
+                    ngModel="{{employeeData?.email}}">
+            </mat-form-field>
+
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Contact Number</mat-label>
+                <input matInput class="form-input" name="number" placeholder="Enter number"
+                    ngModel="{{employeeData?.number}}">
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Blood Group</mat-label>
+                <input matInput type="text" class="form-input" name="bloodgroup" placeholder="Enter Blood Group"
+                    ngModel="{{employeeData?.bloodgroup}}">
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput type="text" class="form-input" name="city" placeholder="Enter city"
+                    ngModel="{{employeeData?.city}}">
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Gender</mat-label>
+                <input matInput type="text" name="gender" placeholder="Enter gender" ngModel="{{employeeData?.gender}}">
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Designation</mat-label>
+                <input matInput type="text" name="designation" placeholder="Enter designation"
+                    ngModel="{{employeeData?.designation}}">
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Designation</mat-label>
+                <input matInput type="password" name="password" placeholder="Enter password"
+                    ngModel="{{employeeData?.password}}">
+            </mat-form-field>
+            <button type="submit" mat-raised-button class="add-button" color="primary">Update</button>
+        </div>
+    </form>
+</div>

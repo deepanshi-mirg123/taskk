@@ -1,0 +1,42 @@
+*{
+  background-color: blue;
+  color: white;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li a {
+  padding: 10px;
+  text-decoration: none;
+  color: #c4d2d1;
+}
+
+
+.nav-list li a:hover {
+  cursor: pointer;
+  color: rgb(192, 120, 120); 
+}
+
+.nav-list li a.selected {
+  color: white; 
+}
+
+.heading{
+  margin-left: 2rem;
+  font-size: xx-large;
+}

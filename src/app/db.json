@@ -1,0 +1,43 @@
+{
+  "employee": [
+    {
+      "id": "de2b",
+      "name": "Kavya",
+      "email": "kavya@gmail.com",
+      "bloodgroup": "O+",
+      "gender": "Female",
+      "city": "Punjab",
+      "number": "89898989",
+      "designation": "Scala Developer",
+      "password": "Kavya@123",
+      "active": 0
+    },
+    {
+      "name": "qwerty",
+      "email": "qwerty@gmail.com",
+      "number": "89898989",
+      "bloodgroup": "O+",
+      "city": "Del",
+      "gender": "Male",
+      "designation": "FrontEnd",
+      "password": "Qwerty@123",
+      "id": "332b"
+    }
+  ],
+  "admin": [
+    {
+      "id": "af75",
+      "role": "admin",
+      "name": "Admin",
+      "password": "Admin@123",
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": "1750",
+      "role": "admin",
+      "name": "Riya",
+      "email": "riya@gmail.com",
+      "password": "Riya@123"
+    }
+  ]
+}

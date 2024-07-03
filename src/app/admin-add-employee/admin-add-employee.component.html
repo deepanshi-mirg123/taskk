@@ -1,0 +1,60 @@
+<div style=" flex-direction: column;flex-direction: column;display: flex;margin-left: 60rem;">
+    <h1 class="add-product">Add Product</h1>
+    <form [formGroup]="addEmployeeForm" (ngSubmit)="submit()" class="common-form"
+        style="display: flex; margin-left: 5rem;margin-top: 2rem;">
+        <div class="w-100 d-flex" style="display:flex; flex-direction: column; width: 40%;">
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Enter Name</mat-label>
+                <input matInput type="text" formControlName="name">
+                <mat-error *ngIf="addEmployeeForm.get('name')?.hasError('required')">Name is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Enter Email</mat-label>
+                <input matInput type="email" formControlName="email">
+                <mat-error *ngIf="addEmployeeForm.get('email')?.hasError('required')">Email is required</mat-error>
+                <mat-error *ngIf="addEmployeeForm.get('email')?.hasError('email')">Invalid email format</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Contact Number</mat-label>
+                <input matInput type="text" formControlName="number">
+                <mat-error *ngIf="addEmployeeForm.get('number')?.hasError('required')">Number is required</mat-error>
+                <mat-error *ngIf="addEmployeeForm.get('number')?.hasError('maxlength')">Number cannot exceed 10
+                    characters</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Enter Blood Group</mat-label>
+                <input matInput type="text" formControlName="bloodgroup">
+                <mat-error *ngIf="addEmployeeForm.get('bloodgroup')?.hasError('required')">Blood Group is
+                    required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput type="text" formControlName="city">
+                <mat-error *ngIf="addEmployeeForm.get('city')?.hasError('required')">City is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Gender</mat-label>
+                <input matInput type="text" formControlName="gender">
+                <mat-error *ngIf="addEmployeeForm.get('gender')?.hasError('required')">Gender is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Designation</mat-label>
+                <input matInput type="text" formControlName="designation">
+                <mat-error *ngIf="addEmployeeForm.get('designation')?.hasError('required')">Blood Group is
+                    required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" appearance="outline">
+                <mat-label>Enter Password</mat-label>
+                <input matInput type="password" formControlName="password">
+                <mat-error *ngIf="addEmployeeForm.get('password')?.hasError('required')">Password is
+                    required</mat-error>
+            </mat-form-field>
+            <div class="d-grid gap-2">
+                <div class="add-button-container d-flex flex-row w-78 align-items-end justify-content-end">
+                    <button type="button" class="cancel-button" mat-raised-button (click)="cancel()">Cancel</button>
+                    <button type="submit" mat-raised-button class="add-button" color="warn">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
